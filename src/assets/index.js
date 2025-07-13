@@ -28,7 +28,7 @@ export { default as starbucks } from './company/starbucks.png';
 export { default as tesla } from './company/tesla.png';
 export { default as shopify } from './company/shopify.png';
 
-export { default as Project1 } from './project_y3.png'
+export { default as Project1 } from './Project_y3.png';
 
 export { default as herobg } from './herobg.png';
 
