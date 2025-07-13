@@ -16,7 +16,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="Logo" className='w-20 sm:w-24  h-fit object-contain'/><p className=' flex gap-2 font-bold text-[15px] cursor-pointer'>Sarakroetth &nbsp; <span className='font-bold sm:block hidden text-[15px] text-white'> | IT .Jr</span></p> 
+          <img src={logo} alt="logo" className='w-20 sm:w-24  h-fit object-contain'/><p className=' flex gap-2 font-bold text-[15px] cursor-pointer'>Sarakroetth &nbsp; <span className='font-bold sm:block hidden text-[15px] text-white'> | IT .Jr</span></p> 
         </Link>
         <ul className='list-none hidden sm:flex  flex-row gap-10'>
           {navLink.map((link) => (
