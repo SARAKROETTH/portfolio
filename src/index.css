@@ -8,3 +8,7 @@
   color-scheme: dark;
 }
 
+.hero-bg {
+  background-image: url('./assets/herobg.png');
+}
+
