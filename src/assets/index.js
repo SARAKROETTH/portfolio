@@ -31,13 +31,3 @@ export { default as shopify } from './company/shopify.png';
 export { default as Project1 } from './Project_y3.png';
 
 export { default as herobg } from './herobg.png';
-
-
-
-
-
-
-
-
-
-
