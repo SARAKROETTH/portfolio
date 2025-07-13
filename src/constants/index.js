@@ -1,8 +1,100 @@
-const services = [
+import {
+    Project1,
+    starbucks,
+    tesla,
+    shopify,
+    meta,
+  web,
+  mobile,
+  backend,
+  creator,
+  css,
+  docker,
+  figma,
+  git,
+  html,
+  javascript,
+  mongodb,
+  nodejs,
+  reactjs,
+  redux,
+  tailwind,
+  typescript,
+  threejs,
+} from "../assets";
 
+const services = [
+  {
+    title: "Web Developer",
+    icon: web,
+  },
+  {
+    title: "React Native Developer",
+    icon: mobile,
+  },
+  {
+    title: "Backend Developer",
+    icon: backend,
+  },
+  {
+    title: "Content Creator",
+    icon: creator,
+  },
 ];
 
 const technologies = [
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: redux,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
+    name: "git",
+    icon: git,
+  },
+  {
+    name: "figma",
+    icon: figma,
+  },
+  {
+    name: "docker",
+    icon: docker,
+  },
 ];
 
 const navLink = [
@@ -25,34 +117,58 @@ const navLink = [
 ];
 
 const experiences = [
-    {
+  {
     title: "React.js Developer",
-    description: "I have worked on projects using React.js, building responsive and dynamic web applications. in the lap of a team, I have contributed to the development of user interfaces and implemented features that enhance user experience.",
-    company_name: "Tech Solutions Inc.",
-    icon: "starbucks",
+    company_name: "Starbucks",
+    icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2023",
-    points:[
-        "Developed user interfaces using React.js and Redux.",
-        "Implemented RESTful APIs for data fetching and state management.",
-        "Collaborated with designers to create responsive layouts.",
-        "Optimized application performance and ensured cross-browser compatibility.",
+    date: "March 2020 - April 2021",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
-    },
-    {
-        title: "Vue js Developer",
-        description: "I have worked on projects using Vue.js, building responsive and dynamic web applications. in the lap of a team, I have contributed to the development of user interfaces and implemented features that enhance user experience.",
-        company_name: "Web Innovations Ltd.",
-        icon: "tesla",
-        iconBg: "#E6DEDD",
-        date: "May 2018 - February 2020",
-        points:[
-            "Developed user interfaces using Vue.js and Vuex.",
-            "Integrated third-party libraries for enhanced functionality.",
-            "Collaborated with backend developers to implement APIs.",
-            "Ensured code quality through unit testing and code reviews.",
-        ],
-    }
+  },
+  {
+    title: "React Native Developer",
+    company_name: "Tesla",
+    icon: tesla,
+    iconBg: "#E6DEDD",
+    date: "Jan 2021 - Feb 2022",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "Web Developer",
+    company_name: "Shopify",
+    icon: shopify,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "Full stack Developer",
+    company_name: "Meta",
+    icon: meta,
+    iconBg: "#E6DEDD",
+    date: "Jan 2023 - Present",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
 ];
 
 const testimonials = [
@@ -81,11 +197,11 @@ const testimonials = [
 
 const projects = [
     {
-        name: "Portfolio Website",
-        description: "A personal portfolio website showcasing my skills, projects, and experiences. Built with React.js and styled-components.",
+        name: "Free Course Website",
+        description: " A free course website built with Vue.js, featuring a user-friendly interface, course listings, and a responsive design. and a backend built with Node.js and MySQL. It allows users to browse and enroll in courses, view course details, and manage their profiles.",
         tags: [
             {
-                name: "react",
+                name: "vue js",
                 color: "blue-text-gradient",
             },
             {
@@ -93,12 +209,20 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
-                name: "javascript",
+                name: "tailwind css",
                 color: "pink-text-gradient",
             },
+            {
+                name: "mysql",
+                color: "orange-text-gradient",
+            },
+            {
+                name: "nodejs",
+                color: "blue-text-gradient",
+            }
         ],
-     image: "tripguide",
-     source_code_link: "https://github.com/user/SARAKROETTH"
+     image: Project1,
+     source_code_link: "https://github.com/SARAKROETTH/PPTEAMZCODE"
     },
     {
         name: "E-commerce Platform",

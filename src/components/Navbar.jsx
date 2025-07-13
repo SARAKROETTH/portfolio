@@ -8,7 +8,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <>
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-[${colors.primary}] ` }>
+    <nav style={{ backgroundColor: colors.primary }} className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20  ` }>
       <div className=' w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link to='/' className='flex items-center gap-2'
           onClick={() => {
@@ -35,7 +35,7 @@ const Navbar = () => {
           <img src={toggle ? close : menu} alt="menu" className='w-[28px] h-[28px] object-contain cursor-pointer' 
             onClick={() => setToggle(!toggle)}
           />
-          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 bg-[${colors.primary}] absolute top-10 right-0 mx-4 my-2 min-w-[140px] rounded-xl z-10`}>
+          <div style={{ backgroundColor: colors.primary }} className={`${!toggle ? 'hidden' : 'flex'} p-6  absolute top-17 right-0 mx-4 my-2 min-w-[140px] rounded-xl z-10`}>
             <ul className='list-none flex flex-col gap-4'>
               {navLink.map((link) => (
                 <li key={link.id} className={`${active === link.title ? `text-white` : `text-gray-400`} hover:text-white text-[15px] font-medium cursor-pointer`}>

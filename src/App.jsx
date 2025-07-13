@@ -10,7 +10,7 @@ const App = () => {
   return (
     <BrowserRouter>
     <div className={`relative text-white ${styles.font} z-0 bg-[${colors.primary}]`}>
-      <div className=" bg-[url('D:\project_webs\portfolio-project\src\assets\Colorbg.jpg')]  bg-center bg-no-repeat bg-cover">
+      <div className=" bg-[url('D:\project_webs\portfolio-project\src\assets\herobg.png')]  bg-center bg-no-repeat bg-cover">
            <Navbar />
            <Hero />
       </div>
