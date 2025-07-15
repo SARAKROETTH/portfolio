@@ -30,7 +30,7 @@ export { default as shopify } from './company/shopify.png';
 export { default as Project1 } from './Project_y3.png';
 export { default as herobg } from './herobg.png';
 
-export { default as Python } from './Python.svg'
+export { default as Python } from './python.svg'
 export { default as vuejs } from './vuejs.svg'
 export { default as flask } from './flask.svg'
 export { default as vscode } from './vscode.svg'
