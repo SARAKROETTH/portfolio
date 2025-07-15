@@ -1,9 +1,15 @@
 import {
-    Project1,
-    starbucks,
-    tesla,
-    shopify,
-    meta,
+  postman,
+  mysql,
+  vscode,
+  flask,
+  vuejs,
+   Python,
+  Project1,
+  starbucks,
+  tesla,
+  shopify,
+  meta,
   web,
   mobile,
   backend,
@@ -14,13 +20,9 @@ import {
   git,
   html,
   javascript,
-  mongodb,
   nodejs,
   reactjs,
-  redux,
   tailwind,
-  typescript,
-  threejs,
 } from "../assets";
 
 const services = [
@@ -56,16 +58,8 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
   },
   {
     name: "Tailwind CSS",
@@ -74,14 +68,6 @@ const technologies = [
   {
     name: "Node JS",
     icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
   },
   {
     name: "git",
@@ -97,22 +83,22 @@ const technologies = [
   },
 ];
 
-const navLink = [
+const navLinks = [
     {
         id: "about",
         title: "About",
     },
     {
-        id: "projects",
+        id: "Skills",
+        title: "Projects",
+    },
+    {
+        id: "work",
         title: "Projects",
     },
     {
         id: "contact",
         title: "Contact",
-    },
-    {
-        id: "experience",
-        title: "Experience",
     },
 ];
 
@@ -266,6 +252,68 @@ const projects = [
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects ,navLink };
+const SkillsProgram = {
+
+  programLang:[
+    {
+      name:'HTML',
+      icon:html,
+    },
+    {
+      name:'Css',
+      icon:css
+    },
+    {
+    name:"JavaScript",
+    icon:javascript
+    },
+    {
+    name:"Python",
+    icon:Python
+    },
+  ],
+  Frameworks:[
+    {
+      name:"Vue js",
+      icon:vuejs
+    },
+    {
+      name:'React js',
+      icon:reactjs
+    },
+    {
+      name:'Flask',
+      icon:flask
+    },
+    {
+      name: 'Tailwindcss',
+      icon:tailwind
+    }
+  ],
+  Tools:[
+    {
+      name:'Figma',
+      icon:figma
+    },
+    {
+      name:'VS',
+      icon:vscode
+    },
+    {
+      name:'Git',
+      icon:git
+    },
+    {
+      name:"Postman",
+      icon:postman
+    },
+    {
+      name:'MySQL',
+      icon:mysql
+    },
+  ]
+}
+
+export { services, technologies, experiences, testimonials, projects ,navLinks ,SkillsProgram };
 
 

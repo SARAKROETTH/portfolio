@@ -1,9 +1,8 @@
-export { default as logo } from './Logo.png';
+export { default as logo } from './logo.svg';
 export { default as close } from './close.svg';
 export { default as menu } from './menu.svg';
 
 export { default as github } from './github.png';
-
 export { default as css } from './tech/css.png';
 export { default as docker } from './tech/docker.png';
 export { default as figma } from './tech/figma.png';
@@ -29,5 +28,12 @@ export { default as tesla } from './company/tesla.png';
 export { default as shopify } from './company/shopify.png';
 
 export { default as Project1 } from './Project_y3.png';
-
 export { default as herobg } from './herobg.png';
+
+export { default as Python } from './Python.svg'
+export { default as vuejs } from './vuejs.svg'
+export { default as flask } from './flask.svg'
+export { default as vscode } from './vscode.svg'
+export { default as mysql } from './mysql.svg'
+
+export { default as postman } from './postman.svg'

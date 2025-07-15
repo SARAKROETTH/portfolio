@@ -1,31 +1,30 @@
 import { BrowserRouter } from 'react-router-dom'
-import { About,Contact,Navbar,Experience,Feedbacks,Hero,Tech,Loader
-,Works,StarCanvas } from './components'
+import { About,Skills,Contact,Navbar,Experience,Feedbacks,Hero,Tech,Loader
+,Works,StarsCanvas } from './components'
 import {colors,styles } from './style'
 
 
 const App = () => {
   return (
     <BrowserRouter>
-    <div className={`relative text-white ${styles.font} z-0 bg-[${colors.primary}]`}>
-      <div className={`bg-[url('./assets/herobg.png')] bg-center bg-no-repeat bg-cover`}>
-           <Navbar />
-           <Hero />
+      <div className='relative z-0 bg-primary'>
+        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+          <Navbar />
+          <Hero />
+        </div>
+        <About />
+        <Skills/>
+        {/* <Experience /> */}
+        <Tech />
+        <Works />
+        {/* <Feedbacks /> */}
+        <div className='relative z-0'>
+          <Contact />
+          <StarsCanvas/>
+        </div>
       </div>
-      <About />
-      <Experience />
-      <Tech />
-      <Works />
-      <Feedbacks />
-      <div className='relative z-0 '>
-      <Contact />
-      <StarCanvas />
-    </div>
-    </div>
-    
-
     </BrowserRouter>
-  )
+  );
 }
 
 export default App
