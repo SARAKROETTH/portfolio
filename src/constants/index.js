@@ -4,7 +4,7 @@ import {
   vscode,
   flask,
   vuejs,
-   Python,
+  Python,
   Project1,
   starbucks,
   tesla,

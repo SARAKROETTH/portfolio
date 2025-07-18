@@ -14,4 +14,5 @@ export { default as Tools } from './Tools.jsx'
 export { default as Frameworks } from './Framworks.jsx'
 
 export { default as StarsCanvas } from './canvas/Stars.jsx'
+export { default as Lang } from './Lang.jsx'
 

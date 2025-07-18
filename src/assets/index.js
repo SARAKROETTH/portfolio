@@ -7,7 +7,7 @@ export { default as css } from './tech/css.png';
 export { default as docker } from './tech/docker.png';
 export { default as figma } from './tech/figma.png';
 export { default as git } from './tech/git.png';
-export { default as html } from './tech/html.png';
+export { default as html } from './html.svg';
 export { default as javascript } from './tech/javascript.png';
 export { default as mongodb } from './tech/mongodb.png';
 export { default as nodejs } from './tech/nodejs.png';

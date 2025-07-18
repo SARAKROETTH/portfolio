@@ -18,7 +18,7 @@ const SkillCard = (
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl border-2 border-transparent hover:border-yellow-600 transition-all duration-300 sm:w-[160px] w-full'
+        className='bg-tertiary p-5 rounded-2xl border-2 border-transparent hover:border-yellow-600 transition-all duration-300  sm:w-[160px] w-full h-[220px] flex flex-col justify-between'
       >
         <div className='relative w-full h-[130px]'>
           <img
