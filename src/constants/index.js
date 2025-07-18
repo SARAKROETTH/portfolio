@@ -90,7 +90,7 @@ const navLinks = [
     },
     {
         id: "Skills",
-        title: "Projects",
+        title: "Skills",
     },
     {
         id: "work",

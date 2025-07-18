@@ -1,8 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 import { styles } from "../style";
 import { EarthCanvas } from "./canvas";
@@ -20,30 +18,17 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { target } = e;
+    const { name, value } = target;
+
     setForm({
       ...form,
       [name]: value,
     });
   };
 
-  const validateForm = () => {
-    if (!form.name || !form.email || !form.message) {
-      toast.error("Please fill in all fields.");
-      return false;
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(form.email)) {
-      toast.error("Please enter a valid email.");
-      return false;
-    }
-    return true;
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!validateForm()) return;
-
     setLoading(true);
 
     emailjs
@@ -52,9 +37,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Sarakroetth",
+          to_name: "JavaScript Mastery",
           from_email: form.email,
-          to_email: "sereysarakroetthbunroeun@gmail.com",
+          to_email: "sujata@jsmastery.pro",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -62,7 +47,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          toast.success("Message sent successfully!");
+          alert("Thank you. I will get back to you as soon as possible.");
 
           setForm({
             name: "",
@@ -72,89 +57,60 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
-          console.error("EmailJS Error:", error);
-          toast.error("Something went wrong. Please try again.");
+          console.error(error);
+
+          alert("Ahh, something went wrong. Please try again.");
         }
       );
   };
 
   return (
-    <>
-      <div className='xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden'>
-        <motion.div
-          variants={slideIn("left", "tween", 0.2, 1)}
-          className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
-        >
-          <p className={styles.sectionSubText}>Get in touch</p>
-          <h3 className={styles.sectionHeadText}>Contact.</h3>
+    <div
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+    >
+      <motion.div
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+      >
+        <h3 className=" text-2xl font-bold">Get in <span className="text-yellow-600">touch</span></h3>
+        <p className=" text-sm text-white/50">Have a project in mind interesting about me or just want to chat? Feel free to reach out directly or connect through my social channels.</p>
+        <div className=" mt-2 flex gap-2 items-center justify-start"> 
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:sereysarakroetthbunroeun@gmail.com" className="text-center hover:text-yellow-600 cursor-pointer">sereysarakroetthbunroeun@gmail.com</a>
+        </div>
+        <div className=" mt-2 flex gap-2 items-center justify-start"> 
+          <i class="fa-solid fa-phone"></i>
+          <p className="text-center ">(+855)<span className=" hover:text-yellow-600 cursor-pointer"> 95471411</span></p>
+        </div>
+        <div className=" mt-2 flex gap-2 items-center justify-start"> 
+          <i class="fa-solid fa-location-dot"></i>
+          <p className="text-center hover:text-yellow-600 text-sm">SangKat Toek Tla,Khan Sen Sok,Phnom Penh , Cambodia </p>
+        </div>
+        <h3 className=" text-2xl text-center mt-4 font-bold">Connect with<span className="text-yellow-600"> Me</span></h3>
+          <div className=" flex mt-6 mb-6 items-center justify-center gap-2 ">
+            
+            <a href="https://github.com/SARAKROETTH" className="group hover:bg-[#d09517] w-[30px] h-[30px] flex items-center justify-center border-2 border-[#d09517] rounded-[50%] p-[20px]">
+               <i class="fa-brands text-[#bd850c] group-hover:text-white fa-github"></i>
+            </a>
+            <a href="https://web.facebook.com/retthyt.poss" className="group hover:bg-[#d09517] w-[30px] h-[30px] flex items-center justify-center border-2 border-[#d09517] rounded-[50%] p-[20px]">
+               <i class="fa-brands group-hover:text-white text-[#d09517] fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/bunroeun-sereysarakroetth-01780834a/" className="group hover:bg-[#d09517]  w-[30px] h-[30px] flex items-center justify-center border-2 border-[#d09517] rounded-[50%] p-[20px]">
+               <i class="fa-brands group-hover:text-white text-[#d09517] fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/retthyt/" className="group hover:bg-[#d09517]  w-[30px] h-[30px] flex items-center justify-center border-2 border-[#d09517] rounded-[50%] p-[20px]">
+               <i class="fa-brands group-hover:text-white text-[#d09517] fa-instagram"></i>
+            </a>
+           </div>
+      </motion.div>
 
-          <form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className='mt-12 flex flex-col gap-8'
-          >
-            <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your Name</span>
-              <input
-                type='text'
-                name='name'
-                value={form.name}
-                onChange={handleChange}
-                placeholder="What's your good name?"
-                className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-                aria-label='Your Name'
-                required
-              />
-            </label>
-            <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your Email</span>
-              <input
-                type='email'
-                name='email'
-                value={form.email}
-                onChange={handleChange}
-                placeholder="What's your email address?"
-                className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-                aria-label='Your Email'
-                required
-              />
-            </label>
-            <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your Message</span>
-              <textarea
-                rows={7}
-                name='message'
-                value={form.message}
-                onChange={handleChange}
-                placeholder='What do you want to say?'
-                className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-                aria-label='Your Message'
-                required
-              />
-            </label>
-
-            <button
-              type='submit'
-              disabled={loading}
-              className={`bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary ${
-                loading ? "opacity-50 cursor-not-allowed" : ""
-              }`}
-            >
-              {loading ? "Sending..." : "Send"}
-            </button>
-          </form>
-        </motion.div>
-
-        <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
-          className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-        >
-          <EarthCanvas />
-        </motion.div>
-      </div>
-
-      <ToastContainer position="top-right" autoClose={3000} />
-    </>
+      <motion.div
+        variants={slideIn("right", "tween", 0.2, 1)}
+        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+      >
+        <EarthCanvas />
+      </motion.div>
+    </div>
   );
 };
 
