@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../style";
+import { Cv } from "../assets";
 
 const Hero = () => {
   return (
@@ -32,7 +33,7 @@ const Hero = () => {
                <i class="fa-brands group-hover:text-white text-[#d09517] fa-instagram"></i>
             </a>
            </div>
-            <a href="" className=" p-[12px_24px] mt-2 bg-[#d09517] font-bold rounded-xl">Download CV</a>
+            <a href={Cv} className=" p-[12px_24px] mt-2 bg-[#d09517] font-bold rounded-xl">Download CV</a>
         </div>
       </div>
       

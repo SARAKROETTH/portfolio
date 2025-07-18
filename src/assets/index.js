@@ -37,3 +37,4 @@ export { default as vscode } from './vscode.svg'
 export { default as mysql } from './mysql.svg'
 
 export { default as postman } from './postman.svg'
+export {default as Cv } from './cv/CURRICULUMVITAE(Roetth).pdf'
